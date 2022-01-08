@@ -3,6 +3,7 @@ import CartItem from "../CartItem/CartItem";
 import { Wrapper } from "./Cart.styles";
 //Types
 import { CartItemType } from "../App";
+import { Typography, Grid, Card } from "@material-ui/core";
 
 type Props = {
 	cartItems: CartItemType[];
@@ -24,6 +25,20 @@ const Cart = ({ cartItems, addToCart, removeFromCart }: Props) => {
 					removeFromCart={removeFromCart}
 				/>
 			))}
+
+			<Card>
+				<Grid container justify="space-around">
+					<Typography variant="h6">Total</Typography>
+					<Typography variant="h6">
+						{cartItems
+							.reduce(
+								(tot, current) => (tot += current.price * current.amount),
+								0
+							)
+							.toFixed(2)}
+					</Typography>
+				</Grid>
+			</Card>
 		</Wrapper>
 	);
 };

@@ -21,8 +21,17 @@ export const Wrapper = styled.div`
 		object-fit: cover;
 		margin-left: 40px;
 	}
-	.buttons {
+	.buttons,
+	.information {
 		display: flex;
+		width: 80%;
+		margin: 0 auto;
+		justify-content: space-between;
+		gap: 1em;
+	}
+
+	.itemTitle {
+		text-align: center;
 	}
 
 	.buttons span {

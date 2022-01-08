@@ -10,7 +10,6 @@ import Item from "./Item/Item";
 import Cart from "./Cart/Cart";
 //styles
 import { Wrapper, StyledButton } from "./App.styles";
-import { NumberLiteralType } from "typescript";
 
 //Types
 export type CartItemType = {
